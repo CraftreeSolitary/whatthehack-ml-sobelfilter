@@ -68,7 +68,7 @@ The Laplacian kernel:
 \begin{bmatrix}
 -1 & -1 & -1\\
 -1 & 8 & -1\\
--1 & -1 & 1
+-1 & -1 & -1
 \end{bmatrix}
 ```
 
