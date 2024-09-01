@@ -12,41 +12,41 @@ A convolution involves using a small matrix, called a kernel, to perform calcula
 ### Sobel Operator
 The Sobel operator is a popular edge detection filter that is used to detect edges in images. It consists of two 3x3 kernels, known as the Sobel kernels, which are convolved with the image to compute the gradient in the x and y directions.\
 Vertical Sobel Kernel (approximates change in the y-direction):
-$
+$$
 \begin{bmatrix}
 -1 & -2 & -1\\
 0 & 0 & 0\\
 1 & 2 & 1
 \end{bmatrix}
-$\
+$$\
 Horizontal Sobel Kernel (approximates change in the x-direction):
-$
+$$
 \begin{bmatrix}
 -1 & 0 & 1\\
 -2 & 0 & 2\\
 -1 & 0 & 1
 \end{bmatrix}
-$\
+$$\
 The gradient magnitude is then computed as the square root of the sum of the squares of the gradients in the x and y directions. The gradient direction is computed as the arctangent of the ratio of the gradients in the y and x directions. The Sobel operator is commonly used in edge detection tasks due to its simplicity and effectiveness.
 
 ### Prewitt Operator
 The Prewitt operator is another edge detection filter that is used to detect edges in images. It is similar to the Sobel operator but uses different kernels to compute the gradient in the x and y directions.\
 Vertical Prewitt Kernel (approximates change in the y-direction):
-$
+$$
 \begin{bmatrix}
 -1 & -1 & -1\\
 0 & 0 & 0\\
 1 & 1 & 1
 \end{bmatrix}
-$\
+$$\
 Horizontal Prewitt Kernel (approximates change in the x-direction):
-$
+$$
 \begin{bmatrix}
 -1 & 0 & 1\\
 -1 & 0 & 1\\
 -1 & 0 & 1
 \end{bmatrix}
-$
+$$
 
 The Sobel and Prewitt operators are extremely similar so I will be working with only the Sobel operator. 
 
@@ -63,13 +63,14 @@ By examining the second derivative, which is the rate of change of the first der
 
 The Laplacian algorithm uses a kernel that approximates the second derivative. Unlike the Sobel algorithm, the Laplacian kernel is symmetrical, meaning rotating it doesn't change its shape. This simplifies the calculations involved in edge detection.
 
-The Laplacian kernel: $
+The Laplacian kernel: 
+$$
 \begin{bmatrix}
 -1 & -1 & -1\\
 -1 & 8 & -1\\
 -1 & -1 & 1
 \end{bmatrix}
-$
+$$
 
 In essence, the Laplacian method helps distinguish between significant edges and noise by setting a threshold for the magnitude of the second derivative. If the magnitude exceeds the threshold, it's considered an edge.
 
