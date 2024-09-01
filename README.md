@@ -32,6 +32,7 @@ The gradient magnitude is then computed as the square root of the sum of the squ
 ### Prewitt Operator
 The Prewitt operator is another edge detection filter that is used to detect edges in images. It is similar to the Sobel operator but uses different kernels to compute the gradient in the x and y directions.\
 Vertical Prewitt Kernel (approximates change in the y-direction):
+```math
 $$
 \begin{bmatrix}
 -1 & -1 & -1\\
@@ -39,6 +40,8 @@ $$
 1 & 1 & 1
 \end{bmatrix}
 $$\
+```
+```math
 Horizontal Prewitt Kernel (approximates change in the x-direction):
 $$
 \begin{bmatrix}
@@ -47,6 +50,7 @@ $$
 -1 & 0 & 1
 \end{bmatrix}
 $$
+```
 
 The Sobel and Prewitt operators are extremely similar so I will be working with only the Sobel operator. 
 
