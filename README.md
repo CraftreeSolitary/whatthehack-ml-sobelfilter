@@ -79,7 +79,7 @@ Convolutional Neural Networks (CNNs) are a type of deep learning model that is c
 
 Here's a tensorboard visualization of the CNN architecture I used for edge detection:
 ![CNN](TensorBoard.png)
-
+By choosing this architecture, we're effectively trying to learn the Sobel operator kernel.
 
 I have chosen to use L1 Loss and Adam optimizer for training the model.
 - The L1 loss can be beneficial for edge detection tasks because it is less sensitive to outliers (noisy pixels) that might be present in images. This can help the model focus on the most salient edges and avoid being distracted by noise.
